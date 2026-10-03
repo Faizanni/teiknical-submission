@@ -11,5 +11,6 @@ connection = s3.connect(db_file)
 
 # convert pandas df to sql db w/ table name "immune-cells"
 df.to_sql(tb_name, connection, if_exists="replace")
+print(f"Data loaded successfully -> {db_file}")
 connection.close()
 # csr = connection.cursor()
